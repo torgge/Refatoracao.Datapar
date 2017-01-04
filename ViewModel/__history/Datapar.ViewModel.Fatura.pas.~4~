@@ -1,0 +1,18 @@
+unit Datapar.ViewModel.Fatura;
+
+interface
+
+uses
+  Datapar.Model.Fatura;
+
+type
+  TDataparViewModelFatura = class
+  private
+    fModelFatura : TModelFatura;
+    function getFaturaDataset: TDataSet;
+  public
+end;
+
+implementation
+
+end.

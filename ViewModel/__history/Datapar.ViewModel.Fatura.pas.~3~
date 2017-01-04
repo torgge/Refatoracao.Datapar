@@ -1,0 +1,17 @@
+unit Datapar.ViewModel.Fatura;
+
+interface
+
+uses
+  Datapar.Model.Fatura;
+
+type
+  TDataparViewModelFatura = class
+  private
+    fModelFatura : TModelFatura;
+  public
+end;
+
+implementation
+
+end.

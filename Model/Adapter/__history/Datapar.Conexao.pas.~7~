@@ -1,0 +1,73 @@
+unit Datapar.Conexao;
+
+interface
+
+uses
+  Data.DB;
+
+type
+  TDataparModoConexao = (mcFireDac = 0, mcDBExpress = 1, mcUniDac = 2, mcDOA = 3);
+
+  TDataparProvider = class
+    strict private
+      FHost: String;
+      FUser: String;
+      FPassword: String;
+      FDriverName: String;
+    public
+      public constructor create(AHost: String; AUser: String; APassword: String; ADriverName: String);
+      property Host: String Read FHost Write FHost;
+      property User: String Read FUser Write FUser;
+      property Password: String Read FPassword Write FPassword;
+      property DriverName: String Read FDriverName Write FDriverName;
+  end;
+
+  TDataparCommand = class
+    strict private
+      FSQL : String;
+    public
+      constructor create(ASql: string);
+      property SQL: String Read FSQL Write FSQL;
+  end;
+
+  TDataparQuery = class abstract
+    public function executaSQL(ACommand: TDataparCommand): TDataSet; virtual; abstract;
+  end;
+
+  TDataparContext = class
+    strict private
+      FQuery: TDataparQuery;
+      public function executaSQL(ACommand: TDataParCommand): TDataSet;
+      public constructor Create(AQuery: TDataparQuery);
+  end;
+
+implementation
+
+{ TDataparProvider }
+
+constructor TDataparProvider.create(AHost, AUser, APassword: String;
+ADriverName: String);
+begin
+  FHost       := AHost;
+  FUser       := AUser;
+  FPassword   := APassword;
+  FDriverName := ADriverName;
+end;
+
+{ TDataparContext }
+
+{
+  constructor TDataparContext.Create(AQuery: TDataparQuery);
+  begin
+    self.FQuery := AQuery;
+  end;
+}
+
+{ TDataparCommand }
+
+constructor TDataparCommand.create(ASql: string);
+begin
+  self.FSQL := ASql;
+end;
+
+end.

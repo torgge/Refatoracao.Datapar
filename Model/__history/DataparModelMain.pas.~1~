@@ -1,0 +1,33 @@
+unit DataparModelMain;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Datapar.Conexao;
+
+type
+  TDMConexao = class(TDataModule)
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+    fModoConexao: TDataparModoConexao;
+  public
+    { Public declarations }
+    property ModoConexao: TDataparModoConexao read fModoConexao;
+  end;
+
+var
+  DMConexao: TDMConexao;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TDMConexao.DataModuleCreate(Sender: TObject);
+begin
+  fModoConexao := mcFireDac;
+end;
+
+end.

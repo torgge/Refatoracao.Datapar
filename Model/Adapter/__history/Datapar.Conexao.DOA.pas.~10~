@@ -1,0 +1,45 @@
+unit Datapar.Conexao.DOA;
+
+interface
+
+uses DB,
+     Datapar.Conexao,
+     OracleData, Oracle;
+
+type
+  TFireQuery = class(TDataparQuery)
+    strict private
+      FConnection : TOracleSession;
+      FQuery: TOracleQuery;
+    public
+      constructor create(AProvider: TDataparProvider);
+      function executaSql(ACommand: TDataparCommand): TDataSet; override;
+  end;
+
+implementation
+
+{ TFireQuery }
+
+constructor TFireQuery.create(AProvider: TDataparProvider);
+begin
+  if FConnection = nil then
+    begin
+      FConnection := TOracleSession.Create(Nil);
+      FConnection.DriverName := 'ORA';
+      FConnection.Params.Database := AProvider.Host;
+      FConnection.Params.UserName := AProvider.User;
+      FConnection.Params.Password := Aprovider.Password;
+    end;
+  FConnection.Connected := True;
+end;
+
+function TFireQuery.executaSql(ACommand: TDataparCommand): TDataSet;
+begin
+  FQuery:= TFDQuery.Create(Nil);
+  FQuery.Connection := FConnection;
+  FQuery.SQL.Add(ACommand.SQL);
+  FQuery.Active := True;
+  Result := FQuery;
+end;
+
+end.

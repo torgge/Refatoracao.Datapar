@@ -1,0 +1,37 @@
+unit Datapar.View.Fatura;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Datapar.ViewModel.Fatura, Vcl.StdCtrls,
+  Vcl.Grids, Data.Bind.Components, Data.Bind.DBScope, Data.Bind.Controls,
+  Vcl.ExtCtrls, Vcl.Buttons, Vcl.Bind.Navigator;
+
+type
+  TfrmFatura = class(TForm)
+    StringGrid1: TStringGrid;
+    BindSourceDB1: TBindSourceDB;
+    NavigatorBindSourceDB1: TBindNavigator;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+    fViewModelFatura : TDataparViewModelFatura;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmFatura: TfrmFatura;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmFatura.FormCreate(Sender: TObject);
+begin
+  fViewModelFatura := TDataparViewModelFatura.Create;
+  BindSourceDB1.DataSet := fViewModelFatura.FaturaDataset;
+end;
+
+end.

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2015/02/04 10:06:40.000.637,=C:\Users\george.bonespirito\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2015/02/04 10:07:31.000.909,C:\Users\george.bonespirito\Documents\Embarcadero\Studio\Projects\Unit1.dfm=E:\Refatoracao.Datapar\Datapar.Main.dfm</Transaction>
+    <Transaction>2015/02/04 10:07:31.000.909,C:\Users\george.bonespirito\Documents\Embarcadero\Studio\Projects\Unit1.pas=E:\Refatoracao.Datapar\Datapar.Main.pas</Transaction>
+    <Transaction>2015/02/04 10:07:41.000.037,C:\Users\george.bonespirito\Documents\Embarcadero\Studio\Projects\Project1.dproj=E:\Refatoracao.Datapar\Refatoracao.Datapar.dproj</Transaction>
+    <Transaction>2015/02/04 10:18:10.000.747,=E:\Refatoracao.Datapar\Model\Adapter\Datapar.Conexao.pas</Transaction>
+    <Transaction>2015/02/04 10:18:10.000.741,=E:\Refatoracao.Datapar\Model\Adapter\Datapar.Conexao.FireDac.pas</Transaction>
+    <Transaction>2015/02/04 10:18:10.000.736,=E:\Refatoracao.Datapar\Model\Adapter\Datapar.Conexao.Factory.pas</Transaction>
+    <Transaction>2015/02/04 10:18:10.000.731,=E:\Refatoracao.Datapar\Model\Adapter\Datapar.Conexao.DBExpress.pas</Transaction>
+    <Transaction>2015/02/04 10:19:53.000.106,=E:\Refatoracao.Datapar\Unit1.pas</Transaction>
+    <Transaction>2015/02/04 10:22:31.000.372,=E:\Refatoracao.Datapar\Unit1.pas</Transaction>
+    <Transaction>2015/02/04 10:23:00.000.209,E:\Refatoracao.Datapar\Model\DataparModelFatura.pas=E:\Refatoracao.Datapar\Unit1.pas</Transaction>
+    <Transaction>2015/02/04 10:26:28.000.669,=E:\Refatoracao.Datapar\Unit1.pas</Transaction>
+    <Transaction>2015/02/04 10:31:47.000.526,E:\Refatoracao.Datapar\Model\DataparModelMain.pas=E:\Refatoracao.Datapar\Unit1.pas</Transaction>
+    <Transaction>2015/02/04 10:31:47.000.526,E:\Refatoracao.Datapar\Model\DataparModelMain.dfm=E:\Refatoracao.Datapar\Unit1.dfm</Transaction>
+    <Transaction>2015/02/04 10:32:51.000.625,E:\Refatoracao.Datapar\Model\Datapar.Model.Main.pas=E:\Refatoracao.Datapar\Model\DataparModelMain.pas</Transaction>
+    <Transaction>2015/02/04 10:32:51.000.625,E:\Refatoracao.Datapar\Model\Datapar.Model.Main.dfm=E:\Refatoracao.Datapar\Model\DataparModelMain.dfm</Transaction>
+    <Transaction>2015/02/04 10:33:12.000.274,E:\Refatoracao.Datapar\Model\Datapar.Model.Fatura.pas=E:\Refatoracao.Datapar\Model\DataparModelFatura.pas</Transaction>
+    <Transaction>2015/02/04 10:53:51.000.989,E:\Refatoracao.Datapar\Model\Datapar.Model.Main.pas=</Transaction>
+    <Transaction>2015/02/04 10:55:02.000.932,=E:\Refatoracao.Datapar\Unit1.pas</Transaction>
+    <Transaction>2015/02/04 10:55:22.000.774,E:\Refatoracao.Datapar\Unit1.pas=E:\Refatoracao.Datapar\Model\Datapar.Model.Main.pas</Transaction>
+    <Transaction>2015/02/04 11:04:08.000.800,E:\Refatoracao.Datapar\Model\Datapar.Model.Main.pas=</Transaction>
+    <Transaction>2015/02/04 11:04:59.000.584,=E:\Refatoracao.Datapar\Model\Datapar.Model.Main.pas</Transaction>
+    <Transaction>2015/02/04 11:05:05.000.185,E:\Refatoracao.Datapar\Model\Datapar.Model.Main.pas=</Transaction>
+    <Transaction>2015/02/04 11:06:06.000.328,=E:\Refatoracao.Datapar\Unit1.pas</Transaction>
+    <Transaction>2015/02/04 11:06:28.000.339,E:\Refatoracao.Datapar\Unit1.pas=E:\Refatoracao.Datapar\Model\Datapar.Model.Main.pas</Transaction>
+    <Transaction>2015/02/04 11:07:45.000.319,E:\Refatoracao.Datapar\Model\Datapar.Model.Main.pas=</Transaction>
+    <Transaction>2015/02/04 11:08:47.000.882,=E:\Refatoracao.Datapar\Unit1.pas</Transaction>
+    <Transaction>2015/02/04 11:09:57.000.383,E:\Refatoracao.Datapar\Unit1.pas=E:\Refatoracao.Datapar\Model\Datapar.Model.Main.pas</Transaction>
+    <Transaction>2015/02/04 12:09:41.000.396,=E:\Refatoracao.Datapar\Model\Adapter\Datapar.Conexao.DOA.pas</Transaction>
+    <Transaction>2015/02/04 12:21:50.000.221,=E:\Refatoracao.Datapar\Unit1.pas</Transaction>
+    <Transaction>2015/02/04 12:22:31.000.017,E:\Refatoracao.Datapar\Unit1.pas=E:\Refatoracao.Datapar\ViewModel\Datapar.ViewModel.Fatura.pas</Transaction>
+    <Transaction>2015/02/04 12:47:41.000.579,=E:\Refatoracao.Datapar\Unit2.pas</Transaction>
+    <Transaction>2015/02/04 12:49:15.000.839,E:\Refatoracao.Datapar\Unit2.pas=E:\Refatoracao.Datapar\View\Datapar.View.Fatura.pas</Transaction>
+    <Transaction>2015/02/04 12:49:15.000.839,E:\Refatoracao.Datapar\Unit2.dfm=E:\Refatoracao.Datapar\View\Datapar.View.Fatura.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,10 @@
+unit Datapar.ViewModel.Fatura;
+
+interface
+
+uses
+  Datapar.Model.Fatura;
+
+implementation
+
+end.

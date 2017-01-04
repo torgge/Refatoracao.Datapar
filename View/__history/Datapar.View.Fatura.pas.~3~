@@ -1,0 +1,28 @@
+unit Datapar.View.Fatura;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Datapar.ViewModel.Fatura, Vcl.StdCtrls,
+  Vcl.Grids;
+
+type
+  TfrmFatura = class(TForm)
+    StringGrid1: TStringGrid;
+    btnGetDados: TButton;
+  private
+    { Private declarations }
+    fViewModelFatura : TDataparViewModelFatura;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmFatura: TfrmFatura;
+
+implementation
+
+{$R *.dfm}
+
+end.

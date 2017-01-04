@@ -1,0 +1,49 @@
+unit Datapar.Conexao.DBExpress;
+
+interface
+
+uses
+  Data.DB, Datapar.Conexao, Data.FMTBcd, Data.SqlExpr, Data.DBXOracle;
+
+type
+  TExpressQuery = class(TDataparQuery)
+    strict private
+      FConnection : TSQLConnection;
+      FQuery: TSQLQuery;
+    public
+      constructor create(AProvider: TDataparProvider);
+      function executaSql(ACommand: TDataparCommand): TDataSet; override;
+  end;
+
+implementation
+
+{ TFireQuery }
+
+constructor TExpressQuery.create(AProvider: TDataparProvider);
+begin
+  if FConnection = nil then
+    begin
+      FConnection := TSQLConnection.Create(Nil);
+      FConnection.DriverName := AProvider.DriverName;
+      FConnection.Params.Values['DriverName'] := AProvider.DriverName;
+      FConnection.Params.Values['DataBase']   := AProvider.Host;
+      FConnection.Params.Values['User_Name']  := AProvider.User;
+      FConnection.Params.Values['Password']   := AProvider.Password;
+    end;
+  FConnection.Connected := True;
+end;
+
+function TExpressQuery.executaSql(ACommand: TDataparCommand): TDataSet;
+begin
+  if FQuery = Nil then
+    begin
+      FQuery:= TSQLQuery.Create(Nil);
+      FQuery.SQLConnection := FConnection;
+    end;
+
+  FQuery.SQL.Add(ACommand.SQL);
+  FQuery.Active := True;
+  Result := FQuery;
+end;
+
+end.
