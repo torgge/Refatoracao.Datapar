@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="namespaceFolder.Datapar" Type="System.String" Value="Datapar" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Refatoracao" Type="System.String" Value="Refatoracao" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Datapar.Conexao" Type="System.String" Value="Datapar\Conexao" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Datapar.Conexao.FireDac" Type="System.String" Value="Datapar\Conexao\FireDac" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Datapar.Conexao.Factory" Type="System.String" Value="Datapar\Conexao\Factory" Category="General" IsBrowsable="False" />
+</TgConfig>

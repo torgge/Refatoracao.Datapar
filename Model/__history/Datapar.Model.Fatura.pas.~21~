@@ -1,0 +1,30 @@
+unit Datapar.Model.Fatura;
+
+interface
+
+uses DB,
+     Datapar.Model.Main,
+     Datapar.Conexao,
+     Datapar.Conexao.Factory;
+
+Type
+  TModelFatura = class(TDataparModelMain)
+  private
+    fdstFatura: TDataparContext;
+  public
+    constructor Create;
+    property dstFatura: TDataSet read fdstFatura;
+  end;
+
+
+implementation
+
+{ TModelFatura }
+
+constructor TModelFatura.Create;
+begin
+  inherited;
+  fdstFatura := getInstance;
+end;
+
+end.

@@ -1,0 +1,11 @@
+unit DataparModelFatura;
+
+interface
+
+uses Datapar.Conexao,
+     Datapar.Factory;
+
+
+implementation
+
+end.

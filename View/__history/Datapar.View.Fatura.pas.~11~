@@ -1,0 +1,50 @@
+unit Datapar.View.Fatura;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Datapar.ViewModel.Fatura, Vcl.StdCtrls,
+  Vcl.Grids, Data.Bind.Components, Data.Bind.DBScope, Data.Bind.Controls,
+  Vcl.ExtCtrls, Vcl.Buttons, Vcl.Bind.Navigator, Data.Bind.EngExt,
+  Vcl.Bind.DBEngExt, Vcl.Bind.Grid, System.Rtti, System.Bindings.Outputs,
+  Vcl.Bind.Editors, Data.Bind.Grid, FireDAC.UI.Intf, FireDAC.VCLUI.Wait,
+  FireDAC.Stan.Intf, FireDAC.Comp.UI;
+
+type
+  TfrmFatura = class(TForm)
+    StringGrid1: TStringGrid;
+    BindSourceDB1: TBindSourceDB;
+    NavigatorBindSourceDB1: TBindNavigator;
+    BindingsList1: TBindingsList;
+    LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+  private
+    { Private declarations }
+    fViewModelFatura : TDataparViewModelFatura;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmFatura: TfrmFatura;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmFatura.FormCreate(Sender: TObject);
+begin
+  fViewModelFatura := TDataparViewModelFatura.Create;
+  BindSourceDB1.DataSet := fViewModelFatura.FaturaDataset;
+end;
+
+procedure TfrmFatura.FormDestroy(Sender: TObject);
+begin
+  fViewModelFatura.Free;
+end;
+
+end.

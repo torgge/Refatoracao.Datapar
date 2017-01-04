@@ -1,0 +1,15 @@
+﻿[StringGrid1]
+Coordinates=10,10,80,58
+
+[BindSourceDB1]
+Coordinates=300,160,106,72
+
+[]
+Coordinates=62,77,91,36
+
+[BindingsList1]
+Coordinates=109,1,91,36
+
+[NavigatorBindSourceDB1]
+Coordinates=20,200,161,58
+

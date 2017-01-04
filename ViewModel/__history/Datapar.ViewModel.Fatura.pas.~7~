@@ -1,0 +1,41 @@
+unit Datapar.ViewModel.Fatura;
+
+interface
+
+uses
+  DB,
+  Datapar.Model.Fatura;
+
+type
+  TDataparViewModelFatura = class
+  private
+    fModelFatura : TModelFatura;
+    function getFaturaDataSet: TDataSet;
+  public
+    constructor Create;
+    destructor Destroy; Override;
+    property FaturaDataset: TDataSet read getFaturaDataSet;
+end;
+
+implementation
+
+{ TDataparViewModelFatura }
+
+constructor TDataparViewModelFatura.Create;
+begin
+  inherited Create;
+  fModelFatura := TModelFatura.Create;
+end;
+
+destructor TDataparViewModelFatura.Destroy;
+begin
+
+  inherited;
+end;
+
+function TDataparViewModelFatura.getFaturaDataSet: TDataSet;
+begin
+
+end;
+
+end.

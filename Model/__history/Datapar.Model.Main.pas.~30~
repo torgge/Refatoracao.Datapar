@@ -1,0 +1,44 @@
+unit Datapar.Model.Main;
+
+interface
+
+uses
+  Datapar.Conexao, Datapar.Conexao.Factory;
+
+type
+  TDataparModelMain = class
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+    fModoConexao: TDataparModoConexao;
+    fProvider: TDataparProvider;
+  protected
+    function getInstance: TDataparQuery;
+  public
+    { Public declarations }
+    constructor Create();
+//    property ModoConexao: TDataparModoConexao read fModoConexao;
+//    property Provider: TDataparProvider read fProvider;
+  end;
+
+var
+  DMConexao: TDataparModelMain;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TDataparModelMain.Create(Sender: TObject);
+begin
+  fModoConexao := mcFireDac;
+  fProvider    := TDataparProvider.create('DATAPAR.DESENV.COM','geo_colonial','supergeo_colonial','Oracle');
+end;
+
+function TDataparModelMain.getInstance: TDataparQuery;
+begin
+  Result := TDataparFactory.CreateInstance(fModoConexao,fProvider);
+end;
+
+end.
